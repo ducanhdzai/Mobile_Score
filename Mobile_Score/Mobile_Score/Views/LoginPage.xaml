@@ -2,13 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:entry="clr-namespace:Mobile_Score.CustomRender"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:entry="clr-namespace:Mobile_Score.Custom"
              mc:Ignorable="d"
              x:Class="Mobile_Score.Views.LoginPage"
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
         <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-            <entry:BorderLessEntry EntryCornerRadius="10"></entry:BorderLessEntry>
+            <entry:BorderLessEntry  EntryCornerRadius="130"
+                                    EntryBorderColor="{StaticResource Gray-Black}"
+                                    Placeholder="Tên tài khoản"
+                                    >
+            </entry:BorderLessEntry>
+            <Button Style="{StaticResource ButtonDefault}" CornerRadius="30" Text="Đăng nhập"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile_Score.Resource.Style.ButtonColor">
+    <Style x:Key="ButtonDefault" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{DynamicResource GradientStartColor}"></Setter>
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="TextColor" Value="{DynamicResource GradientEndColor}"></Setter>
+    </Style>
+</ResourceDictionary>

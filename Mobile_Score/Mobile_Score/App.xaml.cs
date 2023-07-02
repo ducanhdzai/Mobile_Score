@@ -1,8 +1,6 @@
 ﻿using Mobile_Score.Services;
 using Mobile_Score.Views;
-using System;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace Mobile_Score
 {
@@ -14,7 +12,7 @@ namespace Mobile_Score
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
+            MainPage = new LoginPage();
         }
 
         protected override void OnStart()
