@@ -1,7 +1,5 @@
-﻿using Mobile_Score.ViewModels;
-using Mobile_Score.Views;
+﻿using Mobile_Score.Views;
 using System;
-using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace Mobile_Score
