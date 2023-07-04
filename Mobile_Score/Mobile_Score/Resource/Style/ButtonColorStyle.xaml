@@ -6,5 +6,6 @@
         <Setter Property="BackgroundColor" Value="{DynamicResource GradientStartColor}"></Setter>
         <Setter Property="Margin" Value="10"/>
         <Setter Property="TextColor" Value="{DynamicResource GradientEndColor}"></Setter>
+        <Setter Property="CornerRadius" Value="30"></Setter>
     </Style>
 </ResourceDictionary>

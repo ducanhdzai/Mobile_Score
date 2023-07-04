@@ -10,7 +10,6 @@ namespace Mobile_Score
         public App()
         {
             InitializeComponent();
-
             DependencyService.Register<MockDataStore>();
             MainPage = new LoginPage();
         }
