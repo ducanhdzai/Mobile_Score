@@ -9,6 +9,7 @@ namespace Mobile_Score
 
         public App()
         {
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NGaF5cXmdCdkx0WmFZfV1gdl9DYlZTQ2YuP1ZhSXxQdkJjXH5fcnVRR2RcVkQ=");
             InitializeComponent();
             DependencyService.Register<MockDataStore>();
             MainPage = new LoginPage();
