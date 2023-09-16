@@ -1,44 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:entry="clr-namespace:Mobile_Score.Custom" xmlns:sfButton="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
-             mc:Ignorable="d"
              xmlns:login="clr-namespace:Mobile_Score.ViewModels"
+             mc:Ignorable="d"
              BindingContext="login:LoginViewModel"
              x:Class="Mobile_Score.Views.LoginPage"
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
-        <StackLayout Padding="10,0,10,0" VerticalOptions="Center" x:DataType="login:LoginViewModel">
-            <Grid RowDefinitions="Auto,*">
-                <Frame CornerRadius="10" HorizontalOptions="Center">
-                    <Image Source="logo.png"/>
-                </Frame>
-                <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HasShadow="True" BackgroundColor="White" Grid.Row="1" CornerRadius="30">
-                    <Grid RowDefinitions="Auto,Auto"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                        <entry:BorderLessEntry 
-                                    EntryBorderColor="{StaticResource Gray-Black}"
-                                    EntryCornerRadius="130"
-                                    Margin="10"
-                                    Placeholder="Tên tài khoản"
-                                    >
-                        </entry:BorderLessEntry> 
-                        <entry:BorderLessEntry 
-                                    Grid.Row="1"
-                                    EntryBorderColor="{StaticResource Gray-Black}"
-                                    EntryCornerRadius="130"
-                                    Margin="10"
-                                    IsPassword="True"
-                                    Placeholder="Mật khẩu"
-                                    >
-                        </entry:BorderLessEntry>
-                        <sfButton:SfButton Text="{Binding Username}">
-                            
-                        </sfButton:SfButton>
-                        <Button Grid.Row="2" Command="{Binding LoginCommand}"  Style="{StaticResource ButtonDefault}" Text="Đăng nhập"/>
-                    </Grid>
-                </Frame>
-            </Grid>
-        </StackLayout>
+        <Grid RowDefinitions="Auto,*"  BackgroundColor="Aqua" HeightRequest="400">
+            <Image Source="FPT_Polytechnic.png"
+                 Margin="30"
+       WidthRequest="200"
+       HorizontalOptions="Center" />
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
