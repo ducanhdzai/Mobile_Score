@@ -9,6 +9,7 @@
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
         <Grid RowDefinitions="Auto,*" HeightRequest="400">
+        <Grid RowDefinitions="Auto,*"  BackgroundColor="Aqua" HeightRequest="400">
             <Image Source="FPT_Polytechnic.png"
                  Margin="30"
        WidthRequest="200"
