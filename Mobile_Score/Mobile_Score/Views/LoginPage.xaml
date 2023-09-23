@@ -2,19 +2,57 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:login="clr-namespace:Mobile_Score.ViewModels"
              mc:Ignorable="d"
              BindingContext="login:LoginViewModel"
              x:Class="Mobile_Score.Views.LoginPage"
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
-        <Grid RowDefinitions="Auto,*" HeightRequest="400">
-        <Grid RowDefinitions="Auto,*"  BackgroundColor="Aqua" HeightRequest="400">
-            <Image Source="FPT_Polytechnic.png"
-                 Margin="30"
-       WidthRequest="200"
-       HorizontalOptions="Center" />
-            <Label Text="{StaticResource Access_time_20_filled}" FontSize="1000" FontFamily="FluentIconsFilled"></Label>
+        <Grid RowDefinitions="Auto,Auto,Auto,*"  BackgroundColor="White">
+            <Label 
+                Text="FPLSP_Score"
+                Margin="0,100,0,0"
+                FontSize="50"
+                Grid.Row="0"
+                TextColor="#A85BF6"
+                HorizontalOptions="Center"
+                />
+            <Label
+                Grid.Row="1"
+                Text="Hệ thống hỗ trợ giảng viên FPLSP - FA23"
+                FontSize="16"
+                TextColor="#A85BF6"
+                FontAttributes="Italic"
+                HorizontalOptions="Center"
+                />
+            <buttons:SfButton
+                  CornerRadius="50"
+                BorderWidth="1.5"
+                  Grid.Row="3"
+                FontSize="18"
+                  VerticalOptions="CenterAndExpand"
+                  WidthRequest="350"
+                  HeightRequest="60"
+                  HorizontalOptions="Center" 
+                  BackgroundColor="White"
+                BorderColor="Black"
+                TextColor="Black"
+                  ShowIcon="True" 
+                HorizontalTextAlignment="Start"
+                  Clicked="ButtonLogin">
+                <buttons:SfButton.Image>
+                    <Image Source="google_icon.png" Margin="20,0,15,0" HeightRequest="40" WidthRequest="40"/>
+                </buttons:SfButton.Image>
+                <buttons:SfButton.Text>
+                    Đăng nhập bằng Google
+                </buttons:SfButton.Text>
+            </buttons:SfButton>
+            <Image 
+              Grid.Row="4"
+             Source="FPT_Polytechnic.png"
+             WidthRequest="200"
+             HorizontalOptions="Center" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>
