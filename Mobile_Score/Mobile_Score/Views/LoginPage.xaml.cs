@@ -15,6 +15,9 @@ namespace Mobile_Score.Views
             InitializeComponent();
             this.BindingContext = new LoginViewModel();
         }
-
+        async void ButtonLogin(object sender, EventArgs args)
+        {
+            await Navigation.PushModalAsync(new HomePage());
+        }
     }
 }
