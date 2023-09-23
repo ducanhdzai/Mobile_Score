@@ -95,13 +95,13 @@
     <AndroidResource Include="Resources\drawable\icon_feed.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Mobile_Score\Mobile_Score.csproj">
-      <Project>{62F10520-AE39-4ADE-9B12-D2AE516CB4B6}</Project>
-      <Name>Mobile_Score</Name>
-    </ProjectReference>
+    <AndroidResource Include="Resources\drawable\FPT_Polytechnic.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\FPT_Polytechnic.png" />
+    <ProjectReference Include="..\Mobile_Score\Mobile_Score.csproj">
+      <Project>{4B541CB4-F4D2-4CA4-BBC4-15C9D3DD7927}</Project>
+      <Name>Mobile_Score</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

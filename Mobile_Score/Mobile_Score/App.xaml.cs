@@ -1,7 +1,8 @@
 ﻿using Mobile_Score.Services;
 using Mobile_Score.Views;
 using Xamarin.Forms;
-
+[assembly: ExportFont("FluentSystemIcons-Filled.ttf", Alias = "FluentIconsFilled")]
+[assembly: ExportFont("FluentSystemIcons-Regular.ttf", Alias = "FluentIcons")]
 namespace Mobile_Score
 {
     public partial class App : Application

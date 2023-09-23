@@ -142,10 +142,4 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\Mobile_Score\Mobile_Score.csproj">
-      <Project>{62F10520-AE39-4ADE-9B12-D2AE516CB4B6}</Project>
-      <Name>Mobile_Score</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>
