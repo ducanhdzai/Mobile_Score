@@ -8,11 +8,13 @@
              x:Class="Mobile_Score.Views.LoginPage"
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
+        <Grid RowDefinitions="Auto,*" HeightRequest="400">
         <Grid RowDefinitions="Auto,*"  BackgroundColor="Aqua" HeightRequest="400">
             <Image Source="FPT_Polytechnic.png"
                  Margin="30"
        WidthRequest="200"
        HorizontalOptions="Center" />
+            <Label Text="{StaticResource Access_time_20_filled}" FontSize="1000" FontFamily="FluentIconsFilled"></Label>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
