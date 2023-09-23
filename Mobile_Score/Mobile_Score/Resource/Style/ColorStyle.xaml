@@ -5,4 +5,6 @@
     <Color x:Key="GradientStartColor">#550979</Color>
     <Color x:Key="GradientEndColor">#ffffff</Color>
     <Color x:Key="Gray-Black">#332f2f</Color>
+    <Color x:Key="BaseColor">#A85BF6</Color>
+    <Color x:Key="BackGroundColor">#D9D9D9</Color>
 </ResourceDictionary>
