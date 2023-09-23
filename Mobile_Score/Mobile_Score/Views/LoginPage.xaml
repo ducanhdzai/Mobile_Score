@@ -9,20 +9,20 @@
              x:Class="Mobile_Score.Views.LoginPage"
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
-        <Grid RowDefinitions="Auto,Auto,Auto,*"  BackgroundColor="White">
+        <Grid RowDefinitions="Auto,Auto,Auto,*"  BackgroundColor="{d:StaticResource GradientEndColor}">
             <Label 
                 Text="FPLSP_Score"
                 Margin="0,100,0,0"
                 FontSize="50"
                 Grid.Row="0"
-                TextColor="#A85BF6"
+                TextColor="{StaticResource BaseColor}"
                 HorizontalOptions="Center"
                 />
             <Label
                 Grid.Row="1"
                 Text="Hệ thống hỗ trợ giảng viên FPLSP - FA23"
                 FontSize="16"
-                TextColor="#A85BF6"
+                TextColor="{StaticResource BaseColor}"
                 FontAttributes="Italic"
                 HorizontalOptions="Center"
                 />
@@ -35,7 +35,7 @@
                   WidthRequest="350"
                   HeightRequest="60"
                   HorizontalOptions="Center" 
-                  BackgroundColor="White"
+                  BackgroundColor="{d:StaticResource GradientEndColor}"
                 BorderColor="Black"
                 TextColor="Black"
                   ShowIcon="True" 
