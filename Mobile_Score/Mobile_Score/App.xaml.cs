@@ -13,7 +13,7 @@ namespace Mobile_Score
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MjU4NjA5OEAzMjMyMmUzMDJlMzBpQ0pWUzl2SElsMzlCNkFicUFRMzhURGxhL3dDM3VGSnh2M3JMQkc3RnVvPQ==");
             InitializeComponent();
             DependencyService.Register<MockDataStore>();
-            MainPage = new HomePage();
+            MainPage = new LoginPage();
         }
 
         protected override void OnStart()

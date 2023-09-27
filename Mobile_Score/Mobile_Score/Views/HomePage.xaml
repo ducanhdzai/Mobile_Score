@@ -33,6 +33,7 @@
                         Text="Chuyên ngành"
                        TextColor="Black"
                     CornerRadius="15"
+                    Clicked="MajorButton"
                        >
                 </buttons:SfButton>
                 <buttons:SfButton

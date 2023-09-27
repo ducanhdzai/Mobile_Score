@@ -21,5 +21,9 @@ namespace Mobile_Score.Views
         {
 
         }
+		private void MajorButton(object sender, EventArgs e)
+		{
+            Navigation.PushModalAsync(new MajorPage());
+        }
     }
 }
