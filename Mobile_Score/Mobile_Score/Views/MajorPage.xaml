@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile_Score.Views.MajorPage"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms">
+    <ContentPage.Content>
+        <Grid  RowDefinitions="Auto,Auto,Auto,Auto">
+            <Label
+                Grid.Row="0"
+                Text="Danh sách chuyên ngành"
+                FontSize="22"
+                TextColor="Black"
+                Margin="10,10,0,0"/>
+            <Label
+                Grid.Row="1"
+                Text="Chờ duyệt :"
+                FontSize="16"
+                TextColor="Black"
+                Margin="10,0,0,0"/>
+            <Grid Grid.Row="3" Margin="10,10">
+                <buttons:SfButton 
+                    BackgroundColor="{StaticResource BackGroundColor}"
+                    HeightRequest="150">
+                    <buttons:SfButton.Image>
+                        <Image Source="FPT_Polytechnic.png" Margin="10,10" HeightRequest="100" WidthRequest="50" HorizontalOptions="Center"/>
+                    </buttons:SfButton.Image>
+                    <buttons:SfButton.Text>
+                        Lập trình Web
+                    </buttons:SfButton.Text>
+                    <Label
+                        Text="LTW"
+                        TextColor="Black"/>
+                </buttons:SfButton>
+                <buttons:SfButton 
+                        BackgroundColor="{StaticResource BackGroundColor}"
+                        HeightRequest="150">
+                    <buttons:SfButton.Image>
+                        <Image Source="FPT_Polytechnic.png" Margin="10,10" HeightRequest="100" WidthRequest="50" HorizontalOptions="Center"/>
+                    </buttons:SfButton.Image>
+                    <buttons:SfButton.Text>
+                        Lập trình Web
+                    </buttons:SfButton.Text>
+                    <Label
+                    Text="LTW"
+                    TextColor="Black"/>
+                </buttons:SfButton>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
