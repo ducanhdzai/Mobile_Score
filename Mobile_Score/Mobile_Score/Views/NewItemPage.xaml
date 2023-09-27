@@ -4,6 +4,7 @@
              x:Class="Mobile_Score.Views.NewItemPage"
              Shell.PresentationMode="ModalAnimated"
              Title="New Item"
+             Shell.NavBarIsVisible="False"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.UseSafeArea="true">
     <ContentPage.Content>
