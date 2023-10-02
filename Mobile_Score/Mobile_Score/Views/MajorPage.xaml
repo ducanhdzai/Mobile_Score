@@ -31,19 +31,6 @@
                         Text="LTW"
                         TextColor="Black"/>
                 </buttons:SfButton>
-                <buttons:SfButton 
-                        BackgroundColor="{StaticResource BackGroundColor}"
-                        HeightRequest="150">
-                    <buttons:SfButton.Image>
-                        <Image Source="FPT_Polytechnic.png" Margin="10,10" HeightRequest="100" WidthRequest="50" HorizontalOptions="Center"/>
-                    </buttons:SfButton.Image>
-                    <buttons:SfButton.Text>
-                        Lập trình Web
-                    </buttons:SfButton.Text>
-                    <Label
-                    Text="LTW"
-                    TextColor="Black"/>
-                </buttons:SfButton>
             </Grid>
         </Grid>
     </ContentPage.Content>
