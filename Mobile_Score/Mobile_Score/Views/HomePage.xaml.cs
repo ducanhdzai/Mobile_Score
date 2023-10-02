@@ -25,5 +25,17 @@ namespace Mobile_Score.Views
 		{
             Navigation.PushModalAsync(new MajorPage());
         }
+        private void StatisticButton(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new StatisticPage());
+        }
+        private void LecturerButton(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new LecturePage());
+        }
+        private void StudentButton(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new StudentPage());
+        }
     }
 }
