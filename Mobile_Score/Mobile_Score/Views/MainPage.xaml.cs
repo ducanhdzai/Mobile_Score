@@ -20,9 +20,19 @@ namespace Mobile_Score.Views
 				FontFamily="FluentIcons",
 				Glyph= "\ue70e"
             };
-			tabBar.Items.Add(new ShellContent() { Icon= iConHome, Content = new MajorPage(), Title = "About" });
-			tabBar.Items.Add(new ShellContent() { Icon= iConHome, Content = new HomePage(), Title = "1" });
-			tabBar.Items.Add(new ShellContent() { Icon= iConHome, Content = new LoginPage(), Title = "A2bout" });
+			var iConStatistic = new FontImageSource()
+			{
+				FontFamily ="FluentIcons",
+				Glyph = "\uf2e8"
+			};
+			var iConSetting = new FontImageSource()
+			{
+				FontFamily ="FluentIcons",
+				Glyph = "\uf6b1"
+            };
+			tabBar.Items.Add(new ShellContent() { Icon= iConStatistic, Content = new StatisticPage(), Title = "Thống kê" });
+			tabBar.Items.Add(new ShellContent() { Icon= iConHome, Content = new HomePage(), Title = "Trang chủ" });
+			tabBar.Items.Add(new ShellContent() { Icon= iConSetting, Content = new HomePage(), Title = "Cài đặt" });
 		}
 	}
 }
