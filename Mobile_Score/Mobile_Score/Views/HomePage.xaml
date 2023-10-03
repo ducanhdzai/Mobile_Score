@@ -4,7 +4,13 @@
              x:Class="Mobile_Score.Views.HomePage"
              Shell.NavBarIsVisible="False"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms">
+    <ContentPage.Resources>
+        <FontImageSource
+            x:Key="Major"
+            Glyph="\uf8c2"/>
+    </ContentPage.Resources>
     <ContentPage.Content>
+        
         <Grid RowDefinitions="Auto,Auto,Auto,Auto">
             <Image 
                 Source="user.png"
@@ -35,7 +41,7 @@
                        TextColor="Black"
                     CornerRadius="15"
                     Clicked="MajorButton"
-                       >
+                    ImageSource="{StaticResource Major}">
                 </buttons:SfButton>
                 <buttons:SfButton
                Grid.Row="0"

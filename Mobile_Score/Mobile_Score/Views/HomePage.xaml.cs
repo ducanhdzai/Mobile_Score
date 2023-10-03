@@ -15,12 +15,14 @@ namespace Mobile_Score.Views
 		public HomePage ()
 		{
 			InitializeComponent ();
-		}
-
-        private void Button_SizeChanged(object sender, EventArgs e)
-        {
-
+            var iConStatistic = new FontImageSource()
+            {
+                FontFamily = "FluentIcons",
+                Glyph = "\uf2e8"
+            };
+            
         }
+
 		private void MajorButton(object sender, EventArgs e)
 		{
             Navigation.PushModalAsync(new MajorPage());
