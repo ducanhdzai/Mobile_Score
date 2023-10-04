@@ -16,12 +16,12 @@ Shell.NavBarIsVisible="False">
 Margin="0,100,0,0"
 FontSize="50"
 Grid.Row="0"
-TextColor="{StaticResource BaseColor}"
+TextColor="Black"
 HorizontalOptions="Center" />
                 <Label Grid.Row="1"
 Text="Hệ thống hỗ trợ giảng viên FPLSP - FA23"
 FontSize="16"
-TextColor="{StaticResource BaseColor}"
+TextColor="Black"
 FontAttributes="Italic"
 HorizontalOptions="Center" />
                 <buttons:SfButton
