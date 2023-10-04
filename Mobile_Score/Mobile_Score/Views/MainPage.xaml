@@ -3,5 +3,5 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        Shell.FlyoutItemIsVisible="False"
              x:Class="Mobile_Score.Views.MainPage">
-    <TabBar Shell.TabBarBackgroundColor="White" Shell.TabBarUnselectedColor="Black" Shell.TabBarTitleColor="CadetBlue" x:Name="tabBar"></TabBar>
+    <TabBar Shell.TabBarBackgroundColor="{StaticResource BackGroundColor}" Shell.TabBarUnselectedColor="Black" Shell.TabBarTitleColor="{StaticResource BaseColor}" x:Name="tabBar"></TabBar>
 </Shell>

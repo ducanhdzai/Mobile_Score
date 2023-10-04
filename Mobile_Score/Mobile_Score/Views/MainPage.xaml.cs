@@ -32,7 +32,7 @@ namespace Mobile_Score.Views
             };
 			tabBar.Items.Add(new ShellContent() { Icon= iConStatistic, Content = new StatisticPage(), Title = "Thống kê" });
 			tabBar.Items.Add(new ShellContent() { Icon= iConHome, Content = new HomePage(), Title = "Trang chủ" });
-			tabBar.Items.Add(new ShellContent() { Icon= iConSetting, Content = new HomePage(), Title = "Cài đặt" });
+			tabBar.Items.Add(new ShellContent() { Icon= iConSetting, Content = new SettingsPage(), Title = "Cài đặt" });
 		}
 	}
 }
