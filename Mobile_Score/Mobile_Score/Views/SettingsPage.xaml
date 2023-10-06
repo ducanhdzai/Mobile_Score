@@ -37,18 +37,17 @@
             BorderWidth="1.5"
             Grid.Row="2"
             FontSize="20"
-            VerticalOptions="CenterAndExpand"
+            VerticalOptions="EndAndExpand"
             HeightRequest="45"
             BorderColor="Black"
             TextColor="Black"
             ShowIcon="True"
             HorizontalTextAlignment="Center"
-            BackgroundColor="Red" >
+            BackgroundColor="{StaticResource BackGroundColor}" >
                 <buttons:SfButton.Text>
                     Đăng xuất
                 </buttons:SfButton.Text>
             </buttons:SfButton>
         </Grid>
-        
     </ContentPage.Content>
 </ContentPage>
