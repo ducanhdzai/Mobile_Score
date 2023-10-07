@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mobile_Score.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,14 @@ namespace Mobile_Score.Views
 	{
 		public LecturePage ()
 		{
-			InitializeComponent ();
+			InitializeComponent();
+			this.BindingContext = new LecturesViewModel();
 		}
+		// on appering
+		protected override async void OnAppearing()
+		{
+            base.OnAppearing();
+          var test =  await (this.BindingContext as LecturesViewModel).GetList();
+        }
 	}
 }

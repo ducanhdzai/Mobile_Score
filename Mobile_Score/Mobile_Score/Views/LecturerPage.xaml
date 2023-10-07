@@ -1,6 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+              xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=netstandard"  
+             xmlns:ViewModels="clr-namespace:Mobile_Score.ViewModels"
+             xmlns:Model="clr-namespace:Mobile_Score.Models"
+             x:DataType="ViewModels:LecturesViewModel"
+             xmlns:ListView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
              x:Class="Mobile_Score.Views.LecturePage">
     <ContentPage.Content>
         <Grid  RowDefinitions="Auto,Auto,Auto,Auto">
@@ -10,6 +16,56 @@ Text="Danh sách giảng viên"
 FontSize="22"
 TextColor="Black"
 Margin="10,10,0,0"/>
+            <Grid Grid.Row="1">
+                <Frame 
+                    CornerRadius="5"
+                    BackgroundColor="{StaticResource FrameBackGround}"
+                    >
+                    <Grid RowDefinitions="Auto,Auto,Auto">
+                        <Label Text="Giảng viên"
+                               FontSize="18"
+                               TextColor="Black"
+                               >
+                        </Label>
+                        <combobox:SfComboBox BorderColor="Black" Grid.Row="1" HeightRequest="40" x:Name="comboBox">
+                            <combobox:SfComboBox.ComboBoxSource>
+                                <ListCollection:List x:TypeArguments="x:String">
+                                    <x:String>Great Britain</x:String>
+                                    <x:String>Uganda</x:String>
+                                    <x:String>Ukraine</x:String>
+                                    <x:String>Canada</x:String>
+                                    <x:String>France</x:String>
+                                    <x:String>Italy</x:String>
+                                    <x:String>United Kingdom</x:String>
+                                    <x:String>China</x:String>
+                                    <x:String>Japan</x:String>
+                                </ListCollection:List>
+                            </combobox:SfComboBox.ComboBoxSource>
+                        </combobox:SfComboBox>
+                        <SearchBar Grid.Row="2" WidthRequest="4000" CancelButtonColor="Black" Placeholder="Tìm kiếm"/>
+                    </Grid>
+                </Frame>
+            </Grid>
+            <Grid BackgroundColor="Red"  Grid.Row="2">
+                <ScrollView 
+     BackgroundColor="{StaticResource FrameBackGround}"
+     >
+                    <ListView:SfListView x:Name="listView" 
+       ItemsSource="{Binding Lectures.Data}">
+                        <ListView:SfListView.ItemTemplate>
+                            <DataTemplate x:DataType="Model:Lectures">
+                                <ViewCell>
+                                    <Grid>
+                                        <Label Text="{Binding  Name}" FontAttributes="Bold" />
+                                        <Label Grid.Column="1" Text="{Binding TrainingFacilityName}" />
+                                        <Label Grid.Column="2" Text="{Binding Code}" HorizontalTextAlignment="End" />
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView:SfListView.ItemTemplate>
+                    </ListView:SfListView>
+                </ScrollView>
+            </Grid>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

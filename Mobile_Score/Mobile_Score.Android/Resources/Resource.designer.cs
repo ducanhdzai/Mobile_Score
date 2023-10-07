@@ -20929,6 +20929,9 @@ namespace Mobile_Score.Droid
 			// aapt resource value: 0x7F080050
 			public const int annotationLayout = 2131230800;
 			
+			// aapt resource value: 0x7F080050
+			public const int antiClockwise = 2131230800;
+			
 			// aapt resource value: 0x7F080052
 			public const int anticipate = 2131230802;
 			
@@ -21003,6 +21006,9 @@ namespace Mobile_Score.Droid
 			
 			// aapt resource value: 0x7F080067
 			public const int bounceBoth = 2131230823;
+			
+			// aapt resource value: 0x7F08006A
+			public const int browser_actions_menu_items = 2131230826;
 			
 			// aapt resource value: 0x7F080068
 			public const int bounceEnd = 2131230824;
