@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Mobile_Score.Views.MajorPage"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
         <Grid  RowDefinitions="Auto,Auto,Auto,Auto">
@@ -18,13 +19,11 @@
                 FontSize="16"
                 TextColor="Black"
                 Margin="10,0,0,0"/>
-            <Grid Grid.Row="3" Margin="10,10">
+            <Grid Grid.Row="2" Margin="10,10">
                 <buttons:SfButton 
                     BackgroundColor="{StaticResource BackGroundColor}"
-                    HeightRequest="150">
-                    <buttons:SfButton.Image>
-                        <Image Source="FPT_Polytechnic.png" Margin="10,10" HeightRequest="100" WidthRequest="50" HorizontalOptions="Center"/>
-                    </buttons:SfButton.Image>
+                    HeightRequest="150" 
+                    TextColor="Black">
                     <buttons:SfButton.Text>
                         Lập trình Web
                     </buttons:SfButton.Text>
@@ -32,6 +31,24 @@
                         Text="LTW"
                         TextColor="Black"/>
                 </buttons:SfButton>
+            </Grid>
+            <Grid Grid.Row="3">
+                <syncfusion:SfListView x:Name="listView" 
+                   ItemsSource=""
+                   ItemSize="100">
+                    <syncfusion:SfListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="0.4*" />
+                                    <RowDefinition Height="0.6*" />
+                                </Grid.RowDefinitions>
+                                <Label Text="Lập trình Web" FontAttributes="Bold" TextColor="Teal" FontSize="21" />
+                                <Label Grid.Row="1" Text="LTW" TextColor="Teal" FontSize="15"/>
+                            </Grid>
+                        </DataTemplate>
+                    </syncfusion:SfListView.ItemTemplate>
+                </syncfusion:SfListView>
             </Grid>
         </Grid>
     </ContentPage.Content>

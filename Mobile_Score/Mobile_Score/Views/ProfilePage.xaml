@@ -1,14 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Mobile_Score.Views.ProfilePage">
+             x:Class="Mobile_Score.Views.ProfilePage"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+                xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:sfavatar="clr-namespace:Syncfusion.XForms.AvatarView;assembly=Syncfusion.Core.XForms"
+                >
     <ContentPage.Content>
         <Grid RowDefinitions="Auto,Auto,Auto,Auto">
-            <Image 
-        Source="user.png"
-        Margin="0,50,0,0"
-        WidthRequest="150"
-        HorizontalOptions="Center"/>
+            <sfavatar:SfAvatarView 
+                           Margin="0,20,0,0"
+                           ContentType="Custom"
+                           ImageSource="user.png"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"   
+                           HeightRequest="150"
+                           CornerRadius="75"
+                           WidthRequest="150" />
             <Label 
         Grid.Row="1"
         Text="Xin chào,"
@@ -21,6 +29,9 @@
         FontSize="32"        
         TextColor="Black"
         HorizontalOptions="Center" />
+            <Grid Grid.Row="3">
+                
+            </Grid>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
