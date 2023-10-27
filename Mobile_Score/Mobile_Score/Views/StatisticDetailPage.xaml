@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=netstandard"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+             x:Class="Mobile_Score.Views.StatisticDetailPage">
+    <ContentPage.Content>
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto">
+            <Label
+                FontSize="22"
+                TextColor="Black"
+                Margin="10,10,0,0"
+                Text="Thống kê chi tiết"/>
+            <!--  Icon   -->
+            <Grid Grid.Row="1">
+
+            </Grid>
+            <!--  Combobox   -->
+            <Grid Grid.Row="2" RowDefinitions="Auto,Auto" ColumnSpacing="20" ColumnDefinitions="Auto,Auto">
+                <combobox:SfComboBox HeightRequest="40" WidthRequest="175" Margin="10,0,0,0" Text="Kỳ học">
+                    <combobox:SfComboBox.ComboBoxSource>
+                        <ListCollection:List x:TypeArguments="x:String">
+                            <x:String>Spring 2023</x:String>
+                            <x:String>Fall 2023</x:String>
+                            <x:String>Summer2023</x:String>
+                        </ListCollection:List>
+                    </combobox:SfComboBox.ComboBoxSource>
+                </combobox:SfComboBox>
+                <combobox:SfComboBox HeightRequest="40" WidthRequest="175" Grid.Column="1" Text="Block">
+                    <combobox:SfComboBox.ComboBoxSource>
+                        <ListCollection:List x:TypeArguments="x:String">
+                            <x:String>Block 1</x:String>
+                            <x:String>Block 2</x:String>
+                        </ListCollection:List>
+                    </combobox:SfComboBox.ComboBoxSource>
+                </combobox:SfComboBox>
+                <combobox:SfComboBox HeightRequest="40" WidthRequest="175"  Grid.Row="1" Margin="10,0,0,0" Text="Chuyên ngành">
+                    <combobox:SfComboBox.ComboBoxSource>
+                        <ListCollection:List x:TypeArguments="x:String">
+                            <x:String>Công nghệ thông tin</x:String>
+                            <x:String>Thương mại điện tử</x:String>
+                            <x:String>Làm đẹp</x:String>
+                            
+                        </ListCollection:List>
+                    </combobox:SfComboBox.ComboBoxSource>
+                </combobox:SfComboBox>
+                <combobox:SfComboBox HeightRequest="40" WidthRequest="175"  Grid.Row="1" Grid.Column="1" Text="Chuyên ngành hẹp">
+                    <combobox:SfComboBox.ComboBoxSource>
+                        <ListCollection:List x:TypeArguments="x:String">
+                            <x:String>Lập trình C#</x:String>
+                            <x:String>Lập trình Java</x:String>
+                            
+                        </ListCollection:List>
+                    </combobox:SfComboBox.ComboBoxSource>
+                </combobox:SfComboBox>
+                <combobox:SfComboBox HeightRequest="40" WidthRequest="175"  Grid.Row="2" Margin="10,0,0,0" Text="Môn học">
+                    <combobox:SfComboBox.ComboBoxSource>
+                        <ListCollection:List x:TypeArguments="x:String">
+                            <x:String>NET 1</x:String>
+                            <x:String>NET 2</x:String>
+                            <x:String>NET 3</x:String>
+                            <x:String>NET 4</x:String>
+                            <x:String>NET 5</x:String>
+                            <x:String>NET 6</x:String>
+                        </ListCollection:List>
+                    </combobox:SfComboBox.ComboBoxSource>
+                </combobox:SfComboBox>
+            </Grid>
+            <!--  theo điểm/mẫu điểm/giảng vien   -->
+            <Grid Grid.Row="2"></Grid>
+            <!--  Biểu đồ   -->
+            <Label Grid.Row="3"  Text="Biểu đồ thống kê" Margin="10,10"
+                   FontSize="20"
+                   TextColor="Black"
+                   HorizontalOptions="Center"/>
+            <Grid Grid.Row="4" >
+                <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+
+                    <chart:SfChart.Legend>
+                        <chart:ChartLegend />
+                    </chart:SfChart.Legend>
+
+                    <chart:SfChart.PrimaryAxis>
+                        <chart:CategoryAxis>
+                            <chart:CategoryAxis.Title>
+                                <chart:ChartAxisTitle Text="Name"/>
+                            </chart:CategoryAxis.Title>
+                        </chart:CategoryAxis>
+                    </chart:SfChart.PrimaryAxis>
+
+                    <chart:SfChart.SecondaryAxis>
+                        <chart:NumericalAxis>
+                            <chart:NumericalAxis.Title>
+                                <chart:ChartAxisTitle Text=""/>
+                            </chart:NumericalAxis.Title>
+                        </chart:NumericalAxis>
+                    </chart:SfChart.SecondaryAxis>
+
+                    <chart:SfChart.Series>
+                        <chart:ColumnSeries ItemsSource="{Binding Data}" Label="Điểm" XBindingPath="Name" YBindingPath="Height" EnableTooltip="True">
+                            <chart:ColumnSeries.DataMarker>
+                                <chart:ChartDataMarker/>
+                            </chart:ColumnSeries.DataMarker>
+                        </chart:ColumnSeries>
+                    </chart:SfChart.Series>
+                </chart:SfChart>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

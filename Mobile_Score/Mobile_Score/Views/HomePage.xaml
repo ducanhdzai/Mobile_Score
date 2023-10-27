@@ -4,14 +4,10 @@
              x:Class="Mobile_Score.Views.HomePage"
              Shell.NavBarIsVisible="False"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
-             xmlns:sfavatar="clr-namespace:Syncfusion.XForms.AvatarView;assembly=Syncfusion.Core.XForms">
-    <ContentPage.Resources>
-        <FontImageSource
-            x:Key="Major"
-            Glyph="\uf8c2"/>
-    </ContentPage.Resources>
+             xmlns:sfavatar="clr-namespace:Syncfusion.XForms.AvatarView;assembly=Syncfusion.Core.XForms"
+             xmlns:syncfusion="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
+             >
     <ContentPage.Content>
-        
         <Grid RowDefinitions="Auto,Auto,Auto,Auto">
             <sfavatar:SfAvatarView 
                Margin="0,20,0,0"
@@ -35,33 +31,32 @@
                 TextColor="Black"
                 HorizontalOptions="Center" />
             <Grid Margin="27,20,0,0"  Grid.Row="3" RowDefinitions="Auto,Auto" ColumnSpacing="20" ColumnDefinitions="Auto,Auto">
-                <buttons:SfButton
+                <Grid>
+                    <buttons:SfButton
                     BackgroundColor="{StaticResource BackGroundColor}"
                     HorizontalOptions="Center"
-                Grid.Row="0"
                       WidthRequest="160"
                     HeightRequest="120"
                     Grid.Column="0"
                         Text="Chuyên ngành"
                        TextColor="Black"
                     CornerRadius="15"
-                    Clicked="MajorButton"
-                    ImageSource="{StaticResource Major}">
-                </buttons:SfButton>
-                <buttons:SfButton
-               Grid.Row="0"
-                Grid.Column="1"
+                    Clicked="MajorButton">
+                    </buttons:SfButton>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <buttons:SfButton
                     WidthRequest="160"
                     HeightRequest="120"
                         Text="Thống kê"
                        TextColor="Black"
-BackgroundColor="{StaticResource BackGroundColor}"
+                    BackgroundColor="{StaticResource BackGroundColor}"
                     CornerRadius="15"
                     Clicked="StatisticButton">
-                </buttons:SfButton>
-                <buttons:SfButton
-                Grid.Row="1"
-                    Grid.Column="0" 
+                    </buttons:SfButton>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="0" >
+                    <buttons:SfButton
                     WidthRequest="160"
                 HeightRequest="120"
                       HorizontalOptions="Center"
@@ -70,20 +65,21 @@ BackgroundColor="{StaticResource BackGroundColor}"
                         BackgroundColor="{StaticResource BackGroundColor}"
                     CornerRadius="15"
                     Clicked="LecturerButton">
-                </buttons:SfButton>
-                <buttons:SfButton
-                 Grid.Row="1"
+                    </buttons:SfButton>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <buttons:SfButton
                       HorizontalOptions="Center"
-                        Grid.Column="1"
                       WidthRequest="160"
                         HeightRequest="120"
                         Text="Sinh viên"
                         TextColor="Black"
                          BackgroundColor="{StaticResource BackGroundColor}"
                     CornerRadius="15"
-                    Clicked="StudentButton"
-                >
-                </buttons:SfButton>
+                    Clicked="StudentButton" >
+                    </buttons:SfButton>
+                </Grid>
+                
             </Grid>
         </Grid>
     </ContentPage.Content>

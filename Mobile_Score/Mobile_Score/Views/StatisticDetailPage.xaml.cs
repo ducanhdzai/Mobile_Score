@@ -10,15 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace Mobile_Score.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class StatisticPage : ContentPage
+	public partial class StatisticDetailPage : ContentPage
 	{
-		public StatisticPage ()
+		public StatisticDetailPage ()
 		{
 			InitializeComponent ();
 		}
-        private void DetailButton(object sender, EventArgs e)
-        {
-            Navigation.PushModalAsync(new StatisticDetailPage());
-        }
-    }
+	}
 }
