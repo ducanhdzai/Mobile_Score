@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Mobile_Score.Views.StatisticPage"
              xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              Shell.NavBarIsVisible="False">
 
     <ContentPage.Content>
@@ -19,6 +20,9 @@
             </Grid>
             <!--  Biểu đồ   -->
             <Grid Grid.Row="2">
+                <Label Text="Biểu đồ thống kê" FontSize="20" HorizontalOptions="CenterAndExpand" TextColor="Black"> </Label>
+            </Grid>
+            <Grid Grid.Row="3" HeightRequest="300">
                 <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
                     <chart:SfChart.Legend>
@@ -49,6 +53,23 @@
                         </chart:ColumnSeries>
                     </chart:SfChart.Series>
                 </chart:SfChart>
+            </Grid>
+            <Grid Grid.Row="4" HorizontalOptions="End">
+                <Button
+                    BorderWidth="2"
+                    CornerRadius="15"
+                    FontSize="12"
+                    TextColor="Red"
+                    BackgroundColor="{StaticResource BackGroundColor}"
+                    VerticalOptions="StartAndExpand"
+                    Clicked="DetailButton"
+                    Text="Chi tiết"></Button>
+            </Grid>
+            
+            <Grid Grid.Row="5" BackgroundColor="{StaticResource BackGroundColor}" HeightRequest="200">
+                <Label Grid.Row="0" Text="Xếp hạng lớp học" FontSize="20" TextColor="Black"></Label>
+                <Grid Grid.Row="1" Grid.Column="0"> <Label Text="Lớp học" TextColor="Black" Margin="55,10"></Label></Grid>
+                <Grid Grid.Row="1" Grid.Column="1"> <Label Text="Tổng số" TextColor="Black" Margin="55,10"></Label></Grid>
             </Grid>
         </Grid>
     </ContentPage.Content>

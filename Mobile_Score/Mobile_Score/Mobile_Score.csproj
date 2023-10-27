@@ -20,6 +20,7 @@
     <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="22.1.34" />
     <PackageReference Include="Syncfusion.Xamarin.Core" Version="22.1.34" />
     <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="22.1.34" />
+    <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="22.1.34" />
     <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="22.1.34" />
     <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="22.1.34" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />  
@@ -67,6 +68,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\SettingsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\StatisticDetailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\StatisticPage.xaml">
