@@ -6,7 +6,6 @@ namespace Mobile_Score.Constant
 {
     public class Score_Constant
     {
-        public const string BASE_URL = "https://mobile-score.herokuapp.com/api/";
-        public const string CALLBACK_SCHEME = "xamarinessentials://";
+        public const string BASE_URL = "https://66.42.55.38:1001/api/";
     }
 }

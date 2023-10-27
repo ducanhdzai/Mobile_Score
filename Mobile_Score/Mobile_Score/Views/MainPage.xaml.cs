@@ -27,7 +27,7 @@ namespace Mobile_Score.Views
 			};
 			var iConSetting = new FontImageSource()
 			{
-				FontFamily ="FluentIcons",
+				FontFamily ="FluentIconsFilled",
 				Glyph = "\uf6b1"
             };
 			tabBar.Items.Add(new ShellContent() { Icon= iConStatistic, Content = new StatisticPage(), Title = "Thống kê" });
