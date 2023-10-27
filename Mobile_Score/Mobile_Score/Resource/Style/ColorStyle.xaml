@@ -8,4 +8,5 @@
     <Color x:Key="BaseColor">#A85BF6</Color>
     <Color x:Key="BackGroundColor">#D9D9D9</Color>
     <Color x:Key="FrameBackGround">#D9D9D9</Color>
+    <Color x:Key="TextColor">#332f2f</Color>
 </ResourceDictionary>

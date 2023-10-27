@@ -22,7 +22,7 @@ namespace Mobile_Score.Services.Implements
         }
         public async Task<TResult> GetPagingData(string url)
         {
-            var result = await _httpServices.GetListAsync<TResult>(url);
+            var result = await _httpServices.GetAsync<TResult>(url);
             return result;
         }
     }

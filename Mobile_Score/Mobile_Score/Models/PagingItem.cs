@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 
 namespace Mobile_Score.Models
@@ -12,6 +13,6 @@ namespace Mobile_Score.Models
         public int PageSize { get; set; }
         // có trang sau không
         public bool HasNext { get; set; }
-        public List<T> Data { get; set; }
+        public ObservableCollection<T> Data { get; set; }
     }
 }

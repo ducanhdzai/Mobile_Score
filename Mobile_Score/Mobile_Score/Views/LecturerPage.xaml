@@ -9,7 +9,7 @@
              xmlns:ListView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
              x:Class="Mobile_Score.Views.LecturePage">
     <ContentPage.Content>
-        <Grid  RowDefinitions="Auto,Auto,Auto,Auto">
+        <Grid  RowDefinitions="Auto,Auto,Auto">
             <Label
 Grid.Row="0"
 Text="Danh sách giảng viên"
@@ -22,7 +22,7 @@ Margin="10,10,0,0"/>
                     BackgroundColor="{StaticResource FrameBackGround}"
                     >
                     <Grid RowDefinitions="Auto,Auto,Auto">
-                        <Label Text="Giảng viên"
+                        <Label Text="Cơ sở"
                                FontSize="18"
                                TextColor="Black"
                                >
@@ -46,25 +46,31 @@ Margin="10,10,0,0"/>
                     </Grid>
                 </Frame>
             </Grid>
-            <Grid BackgroundColor="Red"  Grid.Row="2">
-                <ScrollView 
-     BackgroundColor="{StaticResource FrameBackGround}"
-     >
-                    <ListView:SfListView x:Name="listView" 
+            <Grid  Grid.Row="2">
+                <Frame 
+                    CornerRadius="5"
+                    BackgroundColor="{StaticResource FrameBackGround}"
+                    >
+                    <ListView x:Name="listView" 
+                              HasUnevenRows="True"
+                               IsPullToRefreshEnabled="true" 
        ItemsSource="{Binding Lectures.Data}">
-                        <ListView:SfListView.ItemTemplate>
+                        <ListView.ItemTemplate>
                             <DataTemplate x:DataType="Model:Lectures">
-                                <ViewCell>
-                                    <Grid>
-                                        <Label Text="{Binding  Name}" FontAttributes="Bold" />
-                                        <Label Grid.Column="1" Text="{Binding TrainingFacilityName}" />
-                                        <Label Grid.Column="2" Text="{Binding Code}" HorizontalTextAlignment="End" />
+                                <ViewCell  Height="100">
+                                    <Frame CornerRadius="5">
+                                    <Grid RowDefinitions="Auto,Auto,Auto" >
+                                        <Label FontSize="24" Text="{Binding  Name}" FontAttributes="Bold" TextColor="{StaticResource TextColor}" />
+                                        <Label Grid.Row="1" Text="{Binding TrainingFacilityName}" TextColor="{StaticResource TextColor}" />
+                                        <Label Grid.Row="2" Text="{Binding Code, StringFormat='Mã giảng viên {0}'}" HorizontalTextAlignment="End" TextColor="{StaticResource TextColor}"
+            />
                                     </Grid>
+                                    </Frame>
                                 </ViewCell>
                             </DataTemplate>
-                        </ListView:SfListView.ItemTemplate>
-                    </ListView:SfListView>
-                </ScrollView>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Frame>
             </Grid>
         </Grid>
     </ContentPage.Content>

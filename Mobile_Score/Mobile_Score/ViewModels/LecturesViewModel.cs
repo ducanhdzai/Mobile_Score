@@ -33,5 +33,11 @@ namespace Mobile_Score.ViewModels
             Lectures = await _services.GetPagingData("Lecturers/GetAllNotDeletedAsync?idTrainingFacility=16811bfb-dc11-4f3e-b3c7-0f22ad823dad");
             return Lectures;
         }
+        // 
+       public async Task<PagingItem<Lectures>> GetList(string url)
+        {
+            Lectures = await _services.GetPagingData(url);
+            return Lectures;
+        }
     }
 }

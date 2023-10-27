@@ -1,16 +1,9 @@
 ﻿using Mobile_Score.Services.Interfaces;
-using Mobile_Score.Services.Provider;
-using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Net;
 using System.Net.Http;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Essentials;
-using Xamarin.Forms;
-using Xamarin.Forms.PlatformConfiguration;
+using Newtonsoft.Json;
 
 namespace Mobile_Score.Services.Implements
 {
@@ -39,12 +32,7 @@ namespace Mobile_Score.Services.Implements
             throw new NotImplementedException();
         }
 
-        public Task<TResult> GetByIdAsync<TResult>(string url, Guid id) where TResult : class
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task<TResult> GetListAsync<TResult>(string url) where TResult : class
+        public async Task<TResult> GetAsync<TResult>(string url) where TResult : class
         {
             try
             {
@@ -55,19 +43,43 @@ namespace Mobile_Score.Services.Implements
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Có lỗi xảy ra: {ex.Message}");
-                return null;
+                throw new Exception($"Có lỗi xảy ra: {ex.Message}");
             }
-        }
-
-        public Task<TResult> PostAsync<TResult>(string url, TResult data) where TResult : class
-        {
-            throw new NotImplementedException();
         }
 
         public Task<TResult> PutAsync<TResult>(string url, TResult data) where TResult : class
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<TResult> PostAsync<TResult, TData>(string url, TData data)
+            where TResult : class
+            where TData : class
+        {
+            var content = new StringContent(System.Text.Json.JsonSerializer.Serialize(data), Encoding.UTF8, "application/json");
+            var response = await _httpClient.PutAsync(url, content);
+            var stringResult = await response.Content.ReadAsStringAsync();
+            if (!string.IsNullOrWhiteSpace(stringResult))
+            {
+                TResult result = JsonConvert.DeserializeObject<TResult>(stringResult);
+                return result;
+            }
+            return default;
+        }
+
+        public async Task<TResult> PutAsync<TResult, TData>(string url, TData data)
+            where TResult : class
+            where TData : class
+        {
+            var content = new StringContent(System.Text.Json.JsonSerializer.Serialize(data), Encoding.UTF8, "application/json");
+            var response = await _httpClient.PostAsync(url, content);
+            var stringResult = await response.Content.ReadAsStringAsync();
+            if (!string.IsNullOrWhiteSpace(stringResult))
+            {
+                TResult result = JsonConvert.DeserializeObject<TResult>(stringResult);
+                return result;
+            }
+            return default;
         }
     }
 }
